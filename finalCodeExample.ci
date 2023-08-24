@@ -1,0 +1,27 @@
+program finalCodeExample {
+
+	declare A,B,a,b,c;
+
+	function func() {
+		declare d;
+		d := 4;
+		A := B;
+		b := a;
+		return (c+d);
+	}
+
+	procedure proc(in a, inout b) {
+		print(A);
+		print(B);
+		B := func();
+		print(A);
+		print(B);
+	}
+		
+	c := 3;
+	A:=2;
+	B:=2;
+	call proc(in A, inout B);
+	print(A);
+	print(B);
+}.

@@ -1,0 +1,32 @@
+
+program finalCodeExample
+{
+    declare A,B;
+    
+    procedure proc(in a, inout b)
+    {	declare c;
+        function func()
+        {
+            declare d;
+            d:=4;
+            A:=B;
+            b:=a;
+            return(c+d);
+        }
+  
+        # body of proc #
+        c:=3;
+	    print(A);
+	    print(B);
+        B:=func();
+	    print(A);
+        print(B)
+    }
+
+    # body of finalCodeExample #
+    A:=1;
+    B:=2;
+    call proc(in A, inout B);
+    print(A);
+    print(B)
+}.
